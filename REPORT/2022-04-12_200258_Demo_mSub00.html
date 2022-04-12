@@ -1,0 +1,172 @@
+<head>
+    <meta charset="UTF-16" />
+    <title>2022-04-12_200258_Demo_mSub00.html</title>
+</head>
+
+<style>    
+    body
+    {
+        background-color: rgb(30,30,30);
+        color: azure;
+        font-family: monospace;
+        font-size: 16;
+        margin-left: 40px;
+        margin-right: 80px;
+        margin-bottom: 200px;
+    }
+
+    module
+    {
+        color: rgb(156, 220, 254);
+    }
+
+    procedure
+    {
+        color: rgb(206,145,120);
+    }
+
+    Chrono
+    {
+        color: rgb(60,60,60);
+        font-size: 14;
+        margin-left:10px
+    }
+
+    error
+    {
+        color: crimson;
+    }
+
+    exit
+    {
+        color: gold;
+    }
+
+    Balise
+    {
+        color: rgb(150,150,150);
+        font-size: 14;
+    }
+
+    #Headers
+    {
+        list-style:none;
+        margin: 0px;
+        padding: 20px;;
+    }
+
+    ul, li
+    {
+        list-style:none;
+        margin: 0px;
+        padding: 2px;
+
+    }
+    ul ul
+    {
+        margin-left:40px
+    }
+
+    [type="checkbox"]{display:none;}
+
+    label
+    {
+    cursor:pointer;
+    }
+
+    #historique input ~ ul
+    {
+    display:none;
+    }
+
+    #historique input:checked ~ ul
+    {
+    display:block; 
+    }
+
+    #historique [type="checkbox"] + label:before
+    {
+        content:"+"; 
+    }
+
+    #historique [type="checkbox"]:checked + label:before
+    { 
+        content:"-"; 
+    }
+    </style>
+
+<script>
+    function initDossierDeplier()
+    {
+        var oArbo = document.getElementById('historique'),
+            aDossier = oArbo.getElementsByTagName('input');
+        
+        for(var i = 0; i <aDossier.length; i++)
+        {
+            aDossier[i].checked=false;
+        }
+        
+        aDossier[0].checked=true;
+    }
+
+    document.addEventListener('DOMContentLoaded',function()
+    {
+        initDossierDeplier();
+    });
+</script>
+
+<h2>REPORT</h2>
+
+<ul>
+    <li>VBMain : Demo / mSub00</li>
+    <li>Chrono : 0,000 ms</li>
+    <li>User : menan</li>
+    <li>Date : 12/04/2022</li>
+    <li>Time : 20:02:58</li>
+    <li>Err report :</li>
+    <ul>
+        N/A
+    </ul>
+</ul>
+
+<h2>CALL STACK</h2>
+
+<div id = "historique">
+    <ul>
+<li><input type = "checkbox" id="0"><label for="0"><Module>Demo</Module> : <Procedure>mSub00</Procedure>  <Chrono>0,000 ms</Chrono></label>
+<ul>
+<li><input type = "checkbox" id="1"><label for="1"><Module>Demo</Module> : <Procedure>mSub01</Procedure>  <Chrono>0,000 ms</Chrono></label>
+<ul>
+<li><span><Module>Demo</Module> : <Procedure>mSub11</Procedure>  <Chrono>0,000 ms</Chrono></span></li>
+<li><span><Module>Demo</Module> : <Procedure>mSub12</Procedure>  <Chrono>0,000 ms</Chrono></span></li>
+</ul>
+</li>
+<li><input type = "checkbox" id="2"><label for="2"><Module>Demo</Module> : <Procedure>mSub01</Procedure>  <Chrono>0,000 ms</Chrono></label>
+<ul>
+<li><span><Module>Demo</Module> : <Procedure>mSub11</Procedure>  <Chrono>0,000 ms</Chrono></span></li>
+<li><span><Module>Demo</Module> : <Procedure>mSub12</Procedure>  <Chrono>0,000 ms</Chrono></span></li>
+</ul>
+</li>
+<li><input type = "checkbox" id="3"><label for="3"><Module>Demo</Module> : <Procedure>mSub01</Procedure>  <Chrono>0,000 ms</Chrono></label>
+<ul>
+<li><span><Module>Demo</Module> : <Procedure>mSub11</Procedure>  <Chrono>0,000 ms</Chrono></span></li>
+<li><span><Module>Demo</Module> : <Procedure>mSub12</Procedure>  <Chrono>0,000 ms</Chrono></span></li>
+</ul>
+</li>
+<li><input type = "checkbox" id="4"><label for="4"><Module>Demo</Module> : <Procedure>mSub01</Procedure>  <Chrono>0,000 ms</Chrono></label>
+<ul>
+<li><span><Module>Demo</Module> : <Procedure>mSub11</Procedure>  <Chrono>0,000 ms</Chrono></span></li>
+<li><span><Module>Demo</Module> : <Procedure>mSub12</Procedure>  <Chrono>0,000 ms</Chrono></span></li>
+</ul>
+</li>
+<li><input type = "checkbox" id="5"><label for="5"><Module>Demo</Module> : <Procedure>mSub01</Procedure>  <Chrono>0,000 ms</Chrono></label>
+<ul>
+<li><span><Module>Demo</Module> : <Procedure>mSub11</Procedure>  <Chrono>0,000 ms</Chrono></span></li>
+<li><span><Module>Demo</Module> : <Procedure>mSub12</Procedure>  <Chrono>0,000 ms</Chrono></span></li>
+</ul>
+</li>
+</ul>
+</li>
+
+</ul>
+</div>
